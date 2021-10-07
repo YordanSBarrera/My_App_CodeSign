@@ -1,0 +1,15 @@
+.containerFooter {
+  background: darkslategrey;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.containerMenu {
+  height: max-content;
+  width: 90%;
+}
+
+.menuLayout {
+  height: max-content;
+}
