@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import { addTwoDigits } from "./level2";
+//import Formulario from "../Formulario";
 
 const Palindrome = () => {
   const [cadena, setCadena] = useState("");
@@ -18,13 +18,14 @@ const Palindrome = () => {
     // setTexto(addTwoDigits(cadena));
   };
   return (
-    <div>
-      <p className="text-muted">Seccion Palindrome</p>
+    <div className="container">
+      <h3 className="text-muted">Seccion Palindrome</h3>
       <input
         type="text"
         onChange={(e) => {
           setCadena(e.target.value);
         }}
+        className="mr-3"
       />
       <button onClick={esPalindrome}>Palindrome?</button>
       <br />

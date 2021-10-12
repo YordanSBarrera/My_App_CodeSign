@@ -10,7 +10,7 @@ function App() {
       <HeaderLayout />
       <div className="container-fluid">
         <div className="row align-items-center">
-          <div className="col-4 alert alert-danger containerMenu">
+          <div className="col-4 alert alert-danger containerMenu position-relative">
             <MenuLayout />
           </div>
           <div className="col-8 alert alert-primary">

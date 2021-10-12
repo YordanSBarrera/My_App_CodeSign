@@ -6,6 +6,7 @@ const DashboardLayout = () => {
   return (
     <div>
       <Route path="/">
+        <h1 className="text-danger">Test Site.</h1>
         Dolore cupidatat reprehenderit non deserunt do officia exercitation.
         Culpa minim ea aute qui voluptate quis et deserunt eu. Et id in elit
         ipsum esse.
@@ -13,7 +14,7 @@ const DashboardLayout = () => {
       <Route path="/borrar">
         <Borrar />
       </Route>
-      <Route path="Palindrome">
+      <Route path="/Palimdrome">
         <Palindrome />
       </Route>
     </div>
