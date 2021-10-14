@@ -1,6 +1,7 @@
 import Route from "./Route";
 import Borrar from "./codeSignal/Borrar";
 import Palindrome from "./codeSignal/Palindrome";
+import AdjacentElementsProduct from "./codeSignal/AdjacentElementsProduct";
 
 const DashboardLayout = () => {
   return (
@@ -16,6 +17,9 @@ const DashboardLayout = () => {
       </Route>
       <Route path="/Palimdrome">
         <Palindrome />
+      </Route>
+      <Route path="/AdjacentElementsProduct">
+        <AdjacentElementsProduct />
       </Route>
     </div>
   );

@@ -1,6 +1,12 @@
 import Link from "./Link";
 import "../App";
+
 const MenuLayout = () => {
+  /* const Menu = [
+    { title: "Introducción", content: "checkPalindrome" },
+    { title: "Cap 1", content: "exe 1" },
+  ];
+*/
   return (
     <div className="menuLayout">
       Menu
@@ -14,6 +20,11 @@ const MenuLayout = () => {
         <li>
           <Link href="/Palimdrome" className="item">
             checkPalindrome
+          </Link>
+        </li>
+        <li>
+          <Link href="/AdjacentElementsProduct" className="item">
+            AdjacentElementsProduct
           </Link>
         </li>
         <li>

@@ -1,6 +1,6 @@
 const FooterLayout = () => {
   return (
-    <div class="container-fluid p-3 my-1 border-top">
+    <div className="container-fluid p-3 my-1 border-top">
       <div className="row">
         <div className="col-8 text-warning">
           <h2>Footer</h2>

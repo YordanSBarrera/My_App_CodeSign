@@ -25,9 +25,10 @@ const Palindrome = () => {
         onChange={(e) => {
           setCadena(e.target.value);
         }}
-        className="mr-3"
       />
-      <button onClick={esPalindrome}>Palindrome?</button>
+      <button className="mx-2 my-3" onClick={esPalindrome}>
+        Palindrome?
+      </button>
       <br />
       <label>{texto}</label>
     </div>
