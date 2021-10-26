@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Formulario from "../Formulario";
+import { inStringOutArray } from "./FuncionesAux";
 
 const AdjacentElementsProduct = () => {
-  const [array, setArray] = useState("[0,0]");
+  const [array, setArray] = useState("0,0");
+  const [resp, setResp] = useState("???");
+  // console.log(array);
   const info = (
     <div>
       <h3>Example</h3>
@@ -15,20 +18,29 @@ const AdjacentElementsProduct = () => {
       produce the largest product.
     </div>
   );
-  const AEPrespuesta = (array) => {
-    console.log(array);
-    return "VACIO x AHORA " + { array };
-  };
-  /* const capturaVariable = (valor) => {
-    const a = valor + " Esta es la Respuesta!!";
-    return a;
-  };
 
-  /*
-->>>
-valorInial,nameFormulario,info,respuesta,setValor,nameButton
-   <Formulario />
-  */
+  // const getNumbersInString=(string) =>{
+  //   var tmp = string.split("");
+  //   var map = tmp.map(function(current) {
+  //     if (!isNaN(parseInt(current))) {
+  //       return current;
+  //     }
+  //   });
+  const AEProduct = () => {
+    // console.log("-->" + !isNaN(array[0]) + " " + array[0]);
+    const valorAChequiar = inStringOutArray(array);
+    console.log(valorAChequiar);
+    //  console.log(array);
+    let result = Number.NEGATIVE_INFINITY;
+    for (let index = 2; index <= valorAChequiar.length; index++) {
+      const product = valorAChequiar[index - 1] * valorAChequiar[index];
+      if (result < product) {
+        result = product;
+      }
+    }
+    console.log(result);
+    setResp(result);
+  };
   return (
     <div>
       <Formulario
@@ -37,6 +49,8 @@ valorInial,nameFormulario,info,respuesta,setValor,nameButton
         info={info}
         setValor={setArray}
         nameButton="Buscar AEProduct "
+        respuesta={resp}
+        exe={AEProduct}
       />
     </div>
   );

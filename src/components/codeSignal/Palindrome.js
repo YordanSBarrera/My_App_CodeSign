@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Formulario from "../Formulario";
 import FormResp from "../FormResp";
 const Palindrome = () => {
-  const [cadena, setCadena] = useState("");
-  const [texto, setTexto] = useState("Entre una Cadena");
+  const [cadena, setCadena] = useState("Entre una Cadena");
+
+  const [respuesta, setRespuesta] = useState("");
   const description = (
     <div>
       <h2> Example</h2>
@@ -26,31 +27,34 @@ const Palindrome = () => {
     </div>
   );
 
-  function esPalindrome() {
+  const esPalindrome = () => {
+    if (cadena === "") return "???";
     console.log(cadena.length);
     for (let i = 0; i < cadena.length / 2; i++) {
       console.log(cadena[i], i);
       console.log(cadena[cadena.length - i - 1]);
       if (cadena[i] !== cadena[cadena.length - i - 1]) {
-        return setTexto("false, no es Palindrome");
+        return setRespuesta("false, no es Palindrome");
       }
     }
-    return setTexto("Verdadero,es palindrome");
+    return setRespuesta("Verdadero,es palindrome");
 
     // Given the string, check if it is a palindrome.
 
     // setTexto(addTwoDigits(cadena));
-  }
+  };
   return (
     <div className="container">
       <Formulario
-        valorInial={texto}
+        valorInial={cadena}
         nameFormulario={"Given the string, check if it is a palindrome."}
         info={description}
         setValor={setCadena}
+        exe={esPalindrome}
+        respuesta={respuesta}
         nameButton={"Palindrome?"}
       />
-      <FormResp resp={esPalindrome} />
+      <FormResp resp={respuesta} />
     </div>
   );
 };
