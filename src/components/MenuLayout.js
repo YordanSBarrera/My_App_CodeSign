@@ -28,6 +28,16 @@ const MenuLayout = () => {
           </Link>
         </li>
         <li>
+          <Link href="/TwoSum" className="item">
+            TwoSum
+          </Link>
+        </li>
+        <li>
+          <Link href="/CenturyFromYear" className="item">
+            CenturyFromYear
+          </Link>
+        </li>
+        <li>
           <Link href="/borrar" className="item">
             Borrar
           </Link>

@@ -2,6 +2,8 @@ import Route from "./Route";
 import Borrar from "./codeSignal/Borrar";
 import Palindrome from "./codeSignal/Palindrome";
 import AdjacentElementsProduct from "./codeSignal/AdjacentElementsProduct";
+import TwoSum from "./codeSignal/TwoSum";
+import CenturyFromYear from "./codeSignal/CenturyFromYear";
 
 const DashboardLayout = () => {
   return (
@@ -20,6 +22,12 @@ const DashboardLayout = () => {
       </Route>
       <Route path="/AdjacentElementsProduct">
         <AdjacentElementsProduct />
+      </Route>
+      <Route path="/TwoSum">
+        <TwoSum />
+      </Route>
+      <Route path="/CenturyFromYear">
+        <CenturyFromYear />
       </Route>
     </div>
   );
