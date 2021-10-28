@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Formulario from "../Formulario";
-import { inStringOutArray } from "./FuncionesAux";
+import { inStringOutArray } from "../codeSignal/FuncionesAux";
+import { AdjacentElementsProductFunc } from "../codeSignal/EdgeOfTheOcean";
 
 const AdjacentElementsProduct = () => {
   const [array, setArray] = useState("0,0");
@@ -29,17 +30,8 @@ const AdjacentElementsProduct = () => {
   const AEProduct = () => {
     // console.log("-->" + !isNaN(array[0]) + " " + array[0]);
     const valorAChequiar = inStringOutArray(array);
-    console.log(valorAChequiar);
-    //  console.log(array);
-    let result = Number.NEGATIVE_INFINITY;
-    for (let index = 2; index <= valorAChequiar.length; index++) {
-      const product = valorAChequiar[index - 1] * valorAChequiar[index];
-      if (result < product) {
-        result = product;
-      }
-    }
-    console.log(result);
-    setResp(result);
+
+    setResp(AdjacentElementsProductFunc(valorAChequiar));
   };
   return (
     <div>

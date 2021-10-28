@@ -21,7 +21,7 @@ const Formulario = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.setValor(input);
-    console.log(input);
+    //console.log(input);
     props.exe();
     setRes(props.respuesta);
   };

@@ -1,4 +1,23 @@
-export const AlmostIncreasingSequence = () => {
+//exercise #4
+export const AdjacentElementsProductFunc = (array) => {
+  let result = Number.NEGATIVE_INFINITY;
+  for (let index = 2; index <= array.length; index++) {
+    const product = array[index - 1] * array[index];
+    if (result < product) {
+      result = product;
+    }
+  }
+  return result;
+};
+//exercise #5
+export const ShapeAreaFunc = () => {};
+//exercise #6
+export const Make_Array_Consecutive_2Func = () => {};
+//exercise #7
+export const AlmostincreasingSequenceFunc = () => {
+  /*******************
+     REPARAR   &&& Ajustar
+     **************** */
   const sequence = [1, 2, 5, 3, 5];
   // const sequence = [1, 2, 3, 4, 5, 3, 5, 6];
 
@@ -53,13 +72,11 @@ export const AlmostIncreasingSequence = () => {
   }
   return "true bien";
 };
-
-export const addTwoDigits = (n) => {
-  // console.log(n);
-  return Math.floor(n / 10) + (n % 10);
-};
-
-export const matrixElementsSum = () => {
+//exercise #8
+export const MatrixElementsSum = () => {
+  /*******************
+     REPARAR   &&& Ajustar
+     **************** */
   const matrix = [
     [0, 1, 1, 2],
     [0, 5, 0, 0],

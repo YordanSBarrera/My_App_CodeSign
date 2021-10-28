@@ -1,9 +1,9 @@
 import Route from "./Route";
-import Borrar from "./codeSignal/Borrar";
-import Palindrome from "./codeSignal/Palindrome";
-import AdjacentElementsProduct from "./codeSignal/AdjacentElementsProduct";
-import TwoSum from "./codeSignal/TwoSum";
-import CenturyFromYear from "./codeSignal/CenturyFromYear";
+import Borrar from "./Vistas/Borrar";
+import Palindrome from "./Vistas/Palindrome";
+import AdjacentElementsProduct from "./Vistas/AdjacentElementsProduct";
+import TwoSum from "./Vistas/TwoSum";
+import CenturyFromYear from "./Vistas/CenturyFromYear";
 
 const DashboardLayout = () => {
   return (

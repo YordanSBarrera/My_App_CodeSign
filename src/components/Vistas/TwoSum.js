@@ -1,4 +1,5 @@
 import { useState } from "react/cjs/react.development";
+import { AddFunc } from "../codeSignal/TheJourneyBegins";
 import Formulario2Input from "../Formulario2Input";
 
 const TwoSum = () => {
@@ -6,7 +7,7 @@ const TwoSum = () => {
   const [num2, setNum2] = useState(0);
   const [resp, setResp] = useState(0);
   const TS_exe = () => {
-    setResp(parseInt(num1) + parseInt(num2));
+    setResp(AddFunc(parseInt(num1), parseInt(num2)));
   };
   return (
     <Formulario2Input

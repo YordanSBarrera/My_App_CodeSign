@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Formulario from "../Formulario";
 import FormResp from "../FormResp";
+import { CheckPalindromeFunc } from "../codeSignal/TheJourneyBegins";
 const Palindrome = () => {
   const [cadena, setCadena] = useState("Entre una Cadena");
 
@@ -28,20 +29,11 @@ const Palindrome = () => {
   );
 
   const esPalindrome = () => {
-    if (cadena === "") return "???";
-    console.log(cadena.length);
-    for (let i = 0; i < cadena.length / 2; i++) {
-      console.log(cadena[i], i);
-      console.log(cadena[cadena.length - i - 1]);
-      if (cadena[i] !== cadena[cadena.length - i - 1]) {
-        return setRespuesta("false, no es Palindrome");
-      }
-    }
-    return setRespuesta("Verdadero,es palindrome");
-
-    // Given the string, check if it is a palindrome.
-
-    // setTexto(addTwoDigits(cadena));
+    setRespuesta(
+      CheckPalindromeFunc(cadena)
+        ? "True. this is a Palindrome"
+        : "False: This is not a Palindrome"
+    );
   };
   return (
     <div className="container">
