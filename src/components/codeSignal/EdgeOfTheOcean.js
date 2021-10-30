@@ -1,10 +1,23 @@
 //exercise #4
 export const AdjacentElementsProductFunc = (array) => {
+  console.log(array.length);
+
   let result = Number.NEGATIVE_INFINITY;
-  for (let index = 2; index <= array.length; index++) {
-    const product = array[index - 1] * array[index];
-    if (result < product) {
-      result = product;
+
+  if (array.length > 2) {
+    for (let index = 2; index <= array.length; index++) {
+      const product = array[index - 1] * array[index];
+      if (result < product) {
+        result = product;
+      }
+    }
+  } else {
+    if (array.length === 1) {
+      result = array[0];
+    } else {
+      if (array.length === 2) {
+        result = array[0] * array[1];
+      }
     }
   }
   return result;
