@@ -1,4 +1,5 @@
 const FormResp = ({ resp }) => {
+  console.log(resp);
   return (
     <div>
       <h5>Respuesta</h5>

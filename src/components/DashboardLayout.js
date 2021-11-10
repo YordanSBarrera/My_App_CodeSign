@@ -4,6 +4,7 @@ import Palindrome from "./Vistas/Palindrome";
 import AdjacentElementsProduct from "./Vistas/AdjacentElementsProduct";
 import TwoSum from "./Vistas/TwoSum";
 import CenturyFromYear from "./Vistas/CenturyFromYear";
+import ShareArea from "./Vistas/ShareArea";
 
 const DashboardLayout = () => {
   return (
@@ -28,6 +29,9 @@ const DashboardLayout = () => {
       </Route>
       <Route path="/CenturyFromYear">
         <CenturyFromYear />
+      </Route>
+      <Route path="/ShareArea">
+        <ShareArea />
       </Route>
     </div>
   );

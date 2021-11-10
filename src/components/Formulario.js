@@ -1,34 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Formulario = (props) => {
   /*
-  {
-  valorInial,
-  nameFormulario,
-  info,
-  setValor,
-  nameButton,
-}
   valorInial,
   nameFormulario, -> nombre del ejercicio
   info,       -> informacion del ejercicio
   setValor, -> pasar dato al padre (ejercicio)
   nameButton ->nombre del Botton
   */
+
   const [input, setInput] = useState(props.valorInial);
   const [res, setRes] = useState(props.respuesta);
+
+  useEffect(() => {
+    console.log("cambio la respuesta");
+    setRes(props.respuesta);
+  }, [props.respuesta]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.setValor(input);
-    //console.log(input);
+    console.log("V.a pasar-> " + input);
     props.exe();
     setRes(props.respuesta);
   };
   const handleChange = (e) => {
     setInput(e.target.value);
-    // console.log(input);
-    //console.log("Cambio el submit");
+    props.setValor(input);
   };
 
   return (
