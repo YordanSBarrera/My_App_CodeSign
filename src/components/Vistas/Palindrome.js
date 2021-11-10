@@ -29,11 +29,14 @@ const Palindrome = () => {
   );
 
   const esPalindrome = () => {
+    console.log("V. llega->" + cadena);
     setRespuesta(
       CheckPalindromeFunc(cadena)
         ? "True. this is a Palindrome"
         : "False: This is not a Palindrome"
     );
+    console.log(cadena);
+    console.log(respuesta);
   };
   return (
     <div className="container">

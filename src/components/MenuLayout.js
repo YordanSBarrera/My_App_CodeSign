@@ -18,24 +18,54 @@ const MenuLayout = () => {
           </Link>
         </li>
         <li>
-          <Link href="/Palimdrome" className="item">
-            checkPalindrome
-          </Link>
+          <h3> The Journery Begins</h3>
+          <ul>
+            <li>
+              <Link href="/TwoSum" className="item">
+                Add
+              </Link>
+            </li>
+            <li>
+              <Link href="/CenturyFromYear" className="item">
+                CenturyFromYear
+              </Link>
+            </li>
+            <li>
+              <Link href="/Palimdrome" className="item">
+                checkPalindrome
+              </Link>
+            </li>
+          </ul>
         </li>
         <li>
-          <Link href="/AdjacentElementsProduct" className="item">
-            AdjacentElementsProduct
-          </Link>
-        </li>
-        <li>
-          <Link href="/TwoSum" className="item">
-            TwoSum
-          </Link>
-        </li>
-        <li>
-          <Link href="/CenturyFromYear" className="item">
-            CenturyFromYear
-          </Link>
+          <h3>The Edgen of the Ocean</h3>
+          <ul>
+            <li>
+              <Link href="/AdjacentElementsProduct" className="item">
+                AdjacentElementsProduct
+              </Link>
+            </li>
+            <li>
+              <Link href="/Vistas/ShareArea" className="item">
+                ShareArea
+              </Link>
+            </li>
+            <li>
+              <Link href="/MakeArrayConsecutive2" className="item">
+                Make Array Consecutive 2
+              </Link>
+            </li>
+            <li>
+              <Link href="/AlmostIncreasingSequense" className="item">
+                AlmostIncreasingSequense
+              </Link>
+            </li>
+            <li>
+              <Link href="/MatrixElementsSum" className="item">
+                MatrixElementsSum
+              </Link>
+            </li>
+          </ul>
         </li>
         <li>
           <Link href="/borrar" className="item">

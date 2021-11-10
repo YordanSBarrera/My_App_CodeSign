@@ -1,8 +1,10 @@
 const HeaderLayout = () => {
   return (
     <header className="d-flex border-bottom mb-2">
-      <h2 className="textAling-center"> "Header Layout"</h2>
-      <hr />
+      <div className="col-12">
+        <h2 className="text-center ml-5">My CodeSignal</h2>
+        <br />
+      </div>
     </header>
   );
 };

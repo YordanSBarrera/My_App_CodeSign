@@ -5,7 +5,7 @@ export const AdjacentElementsProductFunc = (array) => {
   let result = Number.NEGATIVE_INFINITY;
 
   if (array.length > 2) {
-    for (let index = 2; index <= array.length; index++) {
+    for (let index = 1; index <= array.length; index++) {
       const product = array[index - 1] * array[index];
       if (result < product) {
         result = product;
