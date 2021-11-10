@@ -55,17 +55,7 @@ export const inStringOutArray = (stringValue) => {
   return array;
 };
 
-export const getNumbersInString = (string) => {
-  /*  var tmp = string.split("");
-  var map = tmp.map(function (current) {
-    if (!isNaN(parseInt(current))) {
-      return current;
-    }
-  });
-
-  var numbers = map.filter(function (value) {
-    return value !== undefined;
-  });
-
-  return numbers.join("");*/
+export const getNumbersInString = (stringIn) => {
+  const respuesta = stringIn.replace(/\D/g, "");
+  return respuesta;
 };

@@ -23,7 +23,9 @@ export const AdjacentElementsProductFunc = (array) => {
   return result;
 };
 //exercise #5
-export const ShapeAreaFunc = () => {};
+export const ShapeAreaFunc = (n) => {
+  return n * n + (n - 1) * (n - 1);
+};
 //exercise #6
 export const Make_Array_Consecutive_2Func = () => {};
 //exercise #7

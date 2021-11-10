@@ -2,11 +2,6 @@ import Link from "./Link";
 import "../App";
 
 const MenuLayout = () => {
-  /* const Menu = [
-    { title: "Introducción", content: "checkPalindrome" },
-    { title: "Cap 1", content: "exe 1" },
-  ];
-*/
   return (
     <div className="menuLayout">
       Menu
@@ -46,7 +41,7 @@ const MenuLayout = () => {
               </Link>
             </li>
             <li>
-              <Link href="/Vistas/ShareArea" className="item">
+              <Link href="/ShareArea" className="item">
                 ShareArea
               </Link>
             </li>
