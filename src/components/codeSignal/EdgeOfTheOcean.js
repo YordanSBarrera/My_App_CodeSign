@@ -41,7 +41,7 @@ export const Make_Array_Consecutive_2Func = (Array) => {
   return max - min + 1 - Array.length;
 };
 //exercise #7
-export const AlmostincreasingSequenceFunc = () => {
+export const AlmostincreasingSequenceFunc = (Array) => {
   /*******************
      REPARAR   &&& Ajustar
      **************** */

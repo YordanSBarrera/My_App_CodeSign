@@ -1,6 +1,6 @@
 export const inStringOutArray = (stringValue) => {
   let array = [];
-  console.log(stringValue + "stringValue");
+  // console.log(stringValue + "stringValue");
   let checkNumeroAnterior = false;
   let checkNumeroNegative = false;
   for (let index = 0; index < stringValue.length; index++) {
@@ -11,21 +11,21 @@ export const inStringOutArray = (stringValue) => {
         //si el parametro es " " espacio
         checkNumeroAnterior = false;
         checkNumeroNegative = false;
-        console.log(stringValue[index] + "<-entro");
+        // console.log(stringValue[index] + "<-entro");
       } else {
         if (!checkNumeroAnterior) {
           //si no tiene numero antes...
           checkNumeroAnterior = true;
-          console.log("->" + stringValue[index] + "<-");
+          // console.log("->" + stringValue[index] + "<-");
           //si el valor es espacio lo toma como no Numero.
 
           //agregando al array el numero
-          console.log(stringValue[index]);
+          //console.log(stringValue[index]);
           //si es negativo
           if (checkNumeroNegative) {
-            console.log(
+            /* console.log(
               stringValue[index] + "<!!!!>" + -parseInt(stringValue[index])
-            );
+            );*/
             array.push(-parseInt(stringValue[index]));
             checkNumeroNegative = false;
           } else {
@@ -50,8 +50,8 @@ export const inStringOutArray = (stringValue) => {
       checkNumeroNegative = false;
     }
   }
-  console.log(stringValue);
-  console.log(array);
+  //console.log(stringValue);
+  // console.log(array);
   return array;
 };
 
