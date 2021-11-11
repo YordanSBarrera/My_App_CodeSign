@@ -5,6 +5,9 @@ import AdjacentElementsProduct from "./Vistas/AdjacentElementsProduct";
 import TwoSum from "./Vistas/TwoSum";
 import CenturyFromYear from "./Vistas/CenturyFromYear";
 import ShareArea from "./Vistas/ShareArea";
+import MakeArrayConsecutive2 from "./Vistas/MakeArrayConsecutive2";
+import AlmostIncreasingSequense from "./Vistas/AlmostIncreasingSequense";
+import MatrixElementsSum from "./Vistas/MatrixElementsSum";
 
 const DashboardLayout = () => {
   return (
@@ -32,6 +35,15 @@ const DashboardLayout = () => {
       </Route>
       <Route path="/ShareArea">
         <ShareArea />
+      </Route>
+      <Route path="/MakeArrayConsecutive2">
+        <MakeArrayConsecutive2 />
+      </Route>
+      <Route path="/AlmostIncreasingSequense">
+        <AlmostIncreasingSequense />
+      </Route>
+      <Route path="/MatrixElementsSum">
+        <MatrixElementsSum />
       </Route>
     </div>
   );

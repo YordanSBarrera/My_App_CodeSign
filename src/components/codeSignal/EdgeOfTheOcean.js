@@ -27,7 +27,19 @@ export const ShapeAreaFunc = (n) => {
   return n * n + (n - 1) * (n - 1);
 };
 //exercise #6
-export const Make_Array_Consecutive_2Func = () => {};
+export const Make_Array_Consecutive_2Func = (Array) => {
+  let max = Number.NEGATIVE_INFINITY;
+  let min = Number.POSITIVE_INFINITY;
+  Array.forEach((element) => {
+    if (element > max) {
+      max = element;
+    }
+    if (element < min) {
+      min = element;
+    }
+  });
+  return max - min + 1 - Array.length;
+};
 //exercise #7
 export const AlmostincreasingSequenceFunc = () => {
   /*******************
