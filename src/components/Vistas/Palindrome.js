@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Formulario from "../Formulario";
+import Formulario from "../Formulario2";
 import FormResp from "../FormResp";
 import { CheckPalindromeFunc } from "../codeSignal/TheJourneyBegins";
 const Palindrome = () => {
@@ -30,14 +30,20 @@ const Palindrome = () => {
 
   const esPalindrome = () => {
     console.log("V. llega->" + cadena);
-    setRespuesta(
-      CheckPalindromeFunc(cadena)
-        ? "True. this is a Palindrome"
-        : "False: This is not a Palindrome"
-    );
+    setRespuesta(CheckPalindromeFunc(cadena));
     console.log(cadena);
     console.log(respuesta);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("cadena..>", cadena);
+    const resp = CheckPalindromeFunc(cadena)
+      ? "True. this is a Palindrome"
+      : "False: This is not a Palindrome";
+    setRespuesta(resp);
+  };
+
   return (
     <div className="container">
       <Formulario
@@ -48,6 +54,7 @@ const Palindrome = () => {
         exe={esPalindrome}
         respuesta={respuesta}
         nameButton={"Palindrome?"}
+        handleSubmit={handleSubmit}
       />
       <FormResp resp={respuesta} />
     </div>

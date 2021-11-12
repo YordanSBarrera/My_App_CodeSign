@@ -29,9 +29,11 @@ const AlmostIncreasingSequense = () => {
   );
 
   const FunctAlmostIncreasingSequense = () => {
-    console.log("In Array..>", array);
+    const v = inStringOutArray(array);
+    console.log("In Array..>", v);
 
-    setRespuesta(AlmostincreasingSequenceFunc(inStringOutArray(array)));
+    setRespuesta(AlmostincreasingSequenceFunc(v));
+    console.log("Resp...>", respuesta);
   };
 
   return (

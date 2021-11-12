@@ -42,62 +42,25 @@ export const Make_Array_Consecutive_2Func = (Array) => {
 };
 //exercise #7
 export const AlmostincreasingSequenceFunc = (Array) => {
-  /*******************
-     REPARAR   &&& Ajustar
-     **************** */
-  const sequence = [1, 2, 5, 3, 5];
-  // const sequence = [1, 2, 3, 4, 5, 3, 5, 6];
-
-  let out = 0;
-  // let anterior = 0;
-  if (sequence.length <= 2) {
-    return true;
-  }
-  console.log("length: ", sequence.length);
-  for (let x = 1; x < sequence.length; x++) {
-    console.log("pos:", x, " Out:", out);
-    if (sequence.length < x + 1) {
-      return "true Se acabo";
-    } else {
-      ///////  (1)   ///////
-      if (sequence[x - 1] >= sequence[x]) {
-        console.log("verif (1)");
-        if (out) {
-          return "FALSO";
-        }
-        out = 1;
-        if (x >= 2) {
-          //////  (2)  //////
-          if (sequence[x - 2] >= sequence[x]) {
-            console.log("verif (2)");
-            ///// (3A) /////
-            if (sequence[x - 1] >= sequence[x + 1]) {
-              console.log("verif (3)");
-              return "falso caso werwer";
-            } else {
-              x += 2;
-              out = x;
-            }
-          } else {
-            console.log("verif (2F)");
-            ////  (3B)  ////
-            if (sequence[x] >= sequence[x + 1]) {
-              if (sequence[x - 1] >= sequence[x + 1]) {
-                return "[1.2.3.(1).2] falso";
-              } else {
-                x += 2;
-                console.log(x);
-                out = 4;
-              }
-            } else {
-              out = 3;
-            }
+  //let valor = 0;
+  let check = false;
+  for (let index = 1; index < Array.length; index++) {
+    console.log("i..>", Array[index]);
+    if (Array[index - 1] >= Array[index]) {
+      if (check) {
+        return "false";
+      } else {
+        check = true;
+        if (1 < index) {
+          console.log("i-", index, " l..>", Array.length);
+          if (Array[index - 1] >= Array[index + 1]) {
+            return "false";
           }
         }
       }
     }
   }
-  return "true bien";
+  return "true";
 };
 //exercise #8
 export const MatrixElementsSum = () => {
