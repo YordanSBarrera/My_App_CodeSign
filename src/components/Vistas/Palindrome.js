@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import Formulario from "../Formulario2";
-import FormResp from "../FormResp";
+import Formulario1I from "../Formulario1I";
 import { CheckPalindromeFunc } from "../codeSignal/TheJourneyBegins";
 const Palindrome = () => {
   const [cadena, setCadena] = useState("Entre una Cadena");
-
   const [respuesta, setRespuesta] = useState("");
+
   const description = (
     <div>
       <h2> Example</h2>
@@ -28,13 +27,6 @@ const Palindrome = () => {
     </div>
   );
 
-  const esPalindrome = () => {
-    console.log("V. llega->" + cadena);
-    setRespuesta(CheckPalindromeFunc(cadena));
-    console.log(cadena);
-    console.log(respuesta);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("cadena..>", cadena);
@@ -46,32 +38,16 @@ const Palindrome = () => {
 
   return (
     <div className="container">
-      <Formulario
+      <Formulario1I
         valorInial={cadena}
         nameFormulario={"Given the string, check if it is a palindrome."}
         info={description}
-        setValor={setCadena}
-        exe={esPalindrome}
+        setValue={setCadena}
         respuesta={respuesta}
         nameButton={"Palindrome?"}
         handleSubmit={handleSubmit}
       />
-      <FormResp resp={respuesta} />
     </div>
   );
 };
 export default Palindrome;
-/**
- *  <h3 className="text-muted">Seccion Palindrome</h3>
-      <input
-        type="text"
-        onChange={(e) => {
-          setCadena(e.target.value);
-        }}
-      />
-      <button className="mx-2 my-3" onClick={esPalindrome}>
-        Palindrome?
-      </button>
-      <br />
-      <label>{texto}</label>
- */

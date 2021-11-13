@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Formulario from "../Formulario";
+import Formulario1I from "../Formulario1I";
 import { inStringOutArray } from "../codeSignal/FuncionesAux";
 import { Make_Array_Consecutive_2Func } from "../codeSignal/EdgeOfTheOcean";
 
@@ -23,24 +23,21 @@ const MakeArrayConsecutive2 = () => {
       Ratiorg needs statues of sizes 4, 5 and 7.
     </div>
   );
-  const FunctMakeArrayConsecutive2 = () => {
-    console.log("valor...>", array);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setRespuesta(Make_Array_Consecutive_2Func(inStringOutArray(array)));
-
-    console.log("resp...>", respuesta);
   };
-
   return (
     <div>
-      "MakeArrayConsecutive2"
-      <Formulario
+      <Formulario1I
         nameFormulario="Make Array Consecutive 2"
         valorInial={array}
         info={info}
-        setValor={setArray}
+        setValue={setArray}
         nameButton="How many statues need? "
         respuesta={respuesta}
-        exe={FunctMakeArrayConsecutive2}
+        handleSubmit={handleSubmit}
       />
     </div>
   );

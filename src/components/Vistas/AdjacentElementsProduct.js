@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Formulario from "../Formulario";
+import Formulario from "../Formulario1I";
 import { inStringOutArray } from "../codeSignal/FuncionesAux";
 import { AdjacentElementsProductFunc } from "../codeSignal/EdgeOfTheOcean";
 
 const AdjacentElementsProduct = () => {
   const [array, setArray] = useState("0,0");
-  const [resp, setResp] = useState("???");
+  const [resp, setResp] = useState("");
   // console.log(array);
   const info = (
     <div>
@@ -19,19 +19,9 @@ const AdjacentElementsProduct = () => {
       produce the largest product.
     </div>
   );
-
-  // const getNumbersInString=(string) =>{
-  //   var tmp = string.split("");
-  //   var map = tmp.map(function(current) {
-  //     if (!isNaN(parseInt(current))) {
-  //       return current;
-  //     }
-  //   });
-  const AEProduct = () => {
-    // console.log("-->" + !isNaN(array[0]) + " " + array[0]);
-    const valorAChequiar = inStringOutArray(array);
-
-    setResp(AdjacentElementsProductFunc(valorAChequiar));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setResp(AdjacentElementsProductFunc(inStringOutArray(array)));
   };
   return (
     <div>
@@ -39,10 +29,10 @@ const AdjacentElementsProduct = () => {
         nameFormulario="AdjacentElementsProduct"
         valorInial={array}
         info={info}
-        setValor={setArray}
+        setValue={setArray}
         nameButton="Buscar AEProduct "
         respuesta={resp}
-        exe={AEProduct}
+        handleSubmit={handleSubmit}
       />
     </div>
   );

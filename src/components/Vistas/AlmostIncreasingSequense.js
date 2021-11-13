@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AlmostincreasingSequenceFunc } from "../codeSignal/EdgeOfTheOcean";
 import { inStringOutArray } from "../codeSignal/FuncionesAux";
-import Formulario from "../Formulario";
+import Formulario1I from "../Formulario1I";
 
 const AlmostIncreasingSequense = () => {
   const [array, setArray] = useState("0,0");
@@ -28,23 +28,19 @@ const AlmostIncreasingSequense = () => {
     </div>
   );
 
-  const FunctAlmostIncreasingSequense = () => {
-    const v = inStringOutArray(array);
-    console.log("In Array..>", v);
-
-    setRespuesta(AlmostincreasingSequenceFunc(v));
-    console.log("Resp...>", respuesta);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setRespuesta(AlmostincreasingSequenceFunc(inStringOutArray(array)));
   };
-
   return (
     <div>
-      <Formulario
+      <Formulario1I
         nameFormulario="AlmostIncreasingSequense"
         valorInial={array}
         info={info}
-        setValor={setArray}
+        setValue={setArray}
         respuesta={respuesta}
-        exe={FunctAlmostIncreasingSequense}
+        handleSubmit={handleSubmit}
       />
     </div>
   );

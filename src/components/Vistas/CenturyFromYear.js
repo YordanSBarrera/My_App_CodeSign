@@ -1,5 +1,5 @@
 import { useState } from "react/cjs/react.development";
-import Formulario from "../Formulario";
+import Formulario from "../Formulario1I";
 import { CenturyFromYearFunc } from "../codeSignal/TheJourneyBegins";
 
 const CenturyFromYear = () => {
@@ -25,19 +25,20 @@ const CenturyFromYear = () => {
       </ul>
     </div>
   );
-  const CFY_exe = () => {
-    setRespuesta(CenturyFromYearFunc(anno));
-  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setRespuesta("Century " + CenturyFromYearFunc(anno));
+  };
   return (
     <div className="container">
       <Formulario
         nameFormulario={"Given a year, return the century it is in"}
         info={description}
-        setValor={setAnno}
-        exe={CFY_exe}
+        setValue={setAnno}
         respuesta={respuesta}
         nameButton={"Siglo?"}
+        handleSubmit={handleSubmit}
       />
     </div>
   );
