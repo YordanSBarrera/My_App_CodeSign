@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { ShapeAreaFunc } from "../codeSignal/EdgeOfTheOcean";
 import { getNumbersInString } from "../codeSignal/FuncionesAux";
-import Formulario from "../Formulario";
+import Formulario1I from "../Formulario1I";
 
 const ShareArea = () => {
   const [n, setN] = useState("0");
-  const [respuesta, setRespuesta] = useState("0");
+  const [respuesta, setRespuesta] = useState("");
   const info = (
     <div>
       <p className="text-muted font-italic">
@@ -22,24 +22,27 @@ const ShareArea = () => {
       For n = 3, the output should be shapeArea(n) = 13.
     </div>
   );
-  const functShareArea = () => {
-    console.log("share area-> " + getNumbersInString(n));
 
-    setRespuesta(ShapeAreaFunc(getNumbersInString(n)));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setRespuesta(
+      "n=" +
+        getNumbersInString(n) +
+        "  ShareArea: " +
+        ShapeAreaFunc(getNumbersInString(n))
+    );
   };
 
   return (
     <div>
-      SHARE AREA
-      <Formulario
+      <Formulario1I
         valorInial={n}
         nameFormulario={"Share Area"}
         info={info}
-        setValor={setN}
-        exe={functShareArea}
-        respuesta={
-          "n=" + getNumbersInString(n) + " --> ShareArea: " + respuesta
-        }
+        setValue={setN}
+        handleSubmit={handleSubmit}
+        respuesta={respuesta}
         nameButton={"Share Area"}
       />
     </div>
