@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Formulario1I from "../Formulario1I";
-import { CheckPalindromeFunc } from "../codeSignal/TheJourneyBegins";
+import Formulario1I from "../../Formulario1I";
+import { CheckPalindromeFunc } from "../../codeSignal/TheJourneyBegins";
+
 const Palindrome = () => {
   const [cadena, setCadena] = useState("Entre una Cadena");
   const [respuesta, setRespuesta] = useState("");

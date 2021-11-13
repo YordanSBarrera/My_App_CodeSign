@@ -61,6 +61,34 @@ const MenuLayout = () => {
               </Link>
             </li>
           </ul>
+          <h3>Smooth Sailing</h3>
+          <ul>
+            <li>
+              <Link href="/AllLongestStrings" className="item">
+                AllLongestStrings
+              </Link>
+            </li>
+            <li>
+              <Link href="/CommonCharacterCount" className="item">
+                common Character Count
+              </Link>
+            </li>
+            <li>
+              <Link href="/IsLucky" className="item">
+                isLucky
+              </Link>
+            </li>
+            <li>
+              <Link href="/SortByHeight" className="item">
+                Sort by Height
+              </Link>
+            </li>
+            <li>
+              <Link href="/ReverseInParentheses" className="item">
+                reverseInParentheses
+              </Link>
+            </li>
+          </ul>
         </li>
         <li>
           <Link href="/borrar" className="item">

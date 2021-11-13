@@ -1,6 +1,6 @@
 import { useState } from "react/cjs/react.development";
-import Formulario from "../Formulario1I";
-import { CenturyFromYearFunc } from "../codeSignal/TheJourneyBegins";
+import Formulario from "../../Formulario1I";
+import { CenturyFromYearFunc } from "../../codeSignal/TheJourneyBegins";
 
 const CenturyFromYear = () => {
   const [anno, setAnno] = useState(0);

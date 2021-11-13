@@ -1,6 +1,6 @@
 import { useState } from "react/cjs/react.development";
-import { AddFunc } from "../codeSignal/TheJourneyBegins";
-import Formulario2Input from "../Formulario2Input";
+import { AddFunc } from "../../codeSignal/TheJourneyBegins";
+import Formulario2Input from "../../Formulario2Input";
 
 const TwoSum = () => {
   const [num1, setNum1] = useState(0);

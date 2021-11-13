@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { inStringOuMatrix } from "../codeSignal/FuncionesAux";
-import Formulario1I from "../Formulario1I";
-import { MatrixElementsSumFunc } from "../codeSignal/EdgeOfTheOcean";
+import { inStringOuMatrix } from "../../codeSignal/FuncionesAux";
+import Formulario1I from "../../Formulario1I";
+import { MatrixElementsSumFunc } from "../../codeSignal/EdgeOfTheOcean";
 const MatrixElementsSum = () => {
   const [matrix, setMatrix] = useState([
     [0, 0],
     [0, 0],
   ]);
-  const [respuesta, setRespuesta] = useState("sin respuesta");
+  const [respuesta, setRespuesta] = useState("");
   const info = (
     <div>
       <p>

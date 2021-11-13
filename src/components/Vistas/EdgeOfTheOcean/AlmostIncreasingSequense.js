@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { AlmostincreasingSequenceFunc } from "../codeSignal/EdgeOfTheOcean";
-import { inStringOutArray } from "../codeSignal/FuncionesAux";
-import Formulario1I from "../Formulario1I";
+import { AlmostincreasingSequenceFunc } from "../../codeSignal/EdgeOfTheOcean";
+import { inStringOutArray } from "../../codeSignal/FuncionesAux";
+import Formulario1I from "../../Formulario1I";
 
 const AlmostIncreasingSequense = () => {
   const [array, setArray] = useState("0,0");
