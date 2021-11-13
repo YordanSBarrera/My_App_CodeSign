@@ -5,7 +5,7 @@ import Formulario1I from "../Formulario1I";
 
 const AlmostIncreasingSequense = () => {
   const [array, setArray] = useState("0,0");
-  const [respuesta, setRespuesta] = useState("True");
+  const [respuesta, setRespuesta] = useState("");
   const info = (
     <div>
       <p>
@@ -30,7 +30,9 @@ const AlmostIncreasingSequense = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setRespuesta(AlmostincreasingSequenceFunc(inStringOutArray(array)));
+    setRespuesta(
+      AlmostincreasingSequenceFunc(inStringOutArray(array)) ? "True" : "False"
+    );
   };
   return (
     <div>

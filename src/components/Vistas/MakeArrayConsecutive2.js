@@ -5,7 +5,7 @@ import { Make_Array_Consecutive_2Func } from "../codeSignal/EdgeOfTheOcean";
 
 const MakeArrayConsecutive2 = () => {
   const [array, setArray] = useState("0,0");
-  const [respuesta, setRespuesta] = useState("0");
+  const [respuesta, setRespuesta] = useState("");
   const info = (
     <div>
       <p>

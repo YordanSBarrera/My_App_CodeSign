@@ -42,40 +42,49 @@ export const Make_Array_Consecutive_2Func = (Array) => {
 };
 //exercise #7
 export const AlmostincreasingSequenceFunc = (Array) => {
-  //let valor = 0;
   let check = false;
   for (let index = 1; index < Array.length; index++) {
-    console.log("i..>", Array[index]);
     if (Array[index - 1] >= Array[index]) {
+      console.log("ivalue..>", Array[index]);
       if (check) {
-        return "false";
+        return false;
       } else {
-        check = true;
         if (1 < index) {
-          console.log("i-", index, " l..>", Array.length);
+          // console.log("ipos-", index, " l..>", Array.length);
+          //casos especificos
+          if (index === Array.length - 1) {
+            return true;
+          }
+          if (Array[index - 2] >= Array[index]) {
+            console.log("c2..", Array[index - 2], " > ", Array[index]);
+            check = true;
+          }
           if (Array[index - 1] >= Array[index + 1]) {
-            return "false";
+            console.log("c1..", Array[index - 1], " > ", Array[index + 1]);
+            if (check) {
+              return false;
+            }
+            check = true;
           }
         }
+        check = true;
       }
     }
   }
-  return "true";
+  return true;
 };
 //exercise #8
-export const MatrixElementsSum = () => {
-  /*******************
-     REPARAR   &&& Ajustar
-     **************** */
-  const matrix = [
-    [0, 1, 1, 2],
-    [0, 5, 0, 0],
-    [2, 0, 3, 3],
-  ];
+export const MatrixElementsSumFunc = (matrix) => {
+  // const matrix = [
+  //   [0, 1, 1, 2],
+  //   [0, 5, 0, 0],
+  //   [2, 0, 3, 3],
+  // ];
+  console.log(matrix);
   let count = 0;
   for (let x = 0; x < matrix[0].length; x++) {
     for (let y = 0; y < matrix.length; y++) {
-      //  console.log("M[y][x]: ", matrix[y][x], "x: ", x, "y: ", y);
+      console.log("M[y][x]: ", matrix[y][x], "x: ", x, "y: ", y);
       if (matrix[y][x]) {
         count += matrix[y][x];
         //  console.log(count);
