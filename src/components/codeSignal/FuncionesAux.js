@@ -59,3 +59,22 @@ export const getNumbersInString = (stringIn) => {
   const respuesta = stringIn.replace(/\D/g, "");
   return respuesta;
 };
+
+export const inStringOuMatrix = (stringIn) => {
+  let trosos = stringIn.split("]");
+  let matrix = [];
+  trosos.forEach((element) => {
+    const valueAux = inStringOutArray(element);
+    if (valueAux.length > 1) {
+      matrix.push(valueAux);
+    }
+  });
+  // console.log(matrix.length, matrix);
+  return matrix;
+};
+
+export const printMatrix = (matrix) => {
+  //const valueReturn = matrix;
+  console.log("print");
+  return <div>{matrix.map((elemt) => elemt)}</div>;
+};

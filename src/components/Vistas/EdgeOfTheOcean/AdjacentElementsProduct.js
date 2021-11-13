@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Formulario from "../Formulario1I";
-import { inStringOutArray } from "../codeSignal/FuncionesAux";
-import { AdjacentElementsProductFunc } from "../codeSignal/EdgeOfTheOcean";
+import Formulario from "../../Formulario1I";
+import { inStringOutArray } from "../../codeSignal/FuncionesAux";
+import { AdjacentElementsProductFunc } from "../../codeSignal/EdgeOfTheOcean";
 
 const AdjacentElementsProduct = () => {
   const [array, setArray] = useState("0,0");

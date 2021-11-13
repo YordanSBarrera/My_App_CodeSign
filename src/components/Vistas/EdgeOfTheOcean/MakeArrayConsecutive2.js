@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Formulario1I from "../Formulario1I";
-import { inStringOutArray } from "../codeSignal/FuncionesAux";
-import { Make_Array_Consecutive_2Func } from "../codeSignal/EdgeOfTheOcean";
+import Formulario1I from "../../Formulario1I";
+import { inStringOutArray } from "../../codeSignal/FuncionesAux";
+import { Make_Array_Consecutive_2Func } from "../../codeSignal/EdgeOfTheOcean";
 
 const MakeArrayConsecutive2 = () => {
   const [array, setArray] = useState("0,0");
-  const [respuesta, setRespuesta] = useState("0");
+  const [respuesta, setRespuesta] = useState("");
   const info = (
     <div>
       <p>

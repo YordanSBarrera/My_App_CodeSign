@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { ShapeAreaFunc } from "../codeSignal/EdgeOfTheOcean";
-import { getNumbersInString } from "../codeSignal/FuncionesAux";
-import Formulario1I from "../Formulario1I";
+import { ShapeAreaFunc } from "../../codeSignal/EdgeOfTheOcean";
+import { getNumbersInString } from "../../codeSignal/FuncionesAux";
+import Formulario1I from "../../Formulario1I";
 
 const ShareArea = () => {
   const [n, setN] = useState("0");
