@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { inStringOuMatrix } from "../../codeSignal/FuncionesAux";
+import { inStringOutMatrix } from "../../codeSignal/FuncionesAux";
 import Formulario1I from "../../Formulario1I";
 import { MatrixElementsSumFunc } from "../../codeSignal/EdgeOfTheOcean";
 const MatrixElementsSum = () => {
@@ -24,10 +24,10 @@ const MatrixElementsSum = () => {
   );
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inStringOuMatrix(matrix));
+
     // inStringOuMatrix(matrix);
 
-    setRespuesta(MatrixElementsSumFunc(inStringOuMatrix(matrix)));
+    setRespuesta(MatrixElementsSumFunc(inStringOutMatrix(matrix)));
     //);
   };
   return (

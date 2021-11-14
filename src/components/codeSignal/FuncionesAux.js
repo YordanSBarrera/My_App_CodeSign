@@ -1,4 +1,4 @@
-export const inStringOutArray = (stringValue) => {
+export const inStringOutNumberArray = (stringValue) => {
   let array = [];
   // console.log(stringValue + "stringValue");
   let checkNumeroAnterior = false;
@@ -60,11 +60,12 @@ export const getNumbersInString = (stringIn) => {
   return respuesta;
 };
 
-export const inStringOuMatrix = (stringIn) => {
+export const inStringOutMatrix = (stringIn) => {
   let trosos = stringIn.split("]");
   let matrix = [];
+  console.log(trosos);
   trosos.forEach((element) => {
-    const valueAux = inStringOutArray(element);
+    const valueAux = inStringOutNumberArray(element);
     if (valueAux.length > 1) {
       matrix.push(valueAux);
     }
@@ -73,8 +74,53 @@ export const inStringOuMatrix = (stringIn) => {
   return matrix;
 };
 
+//arreglar
 export const printMatrix = (matrix) => {
   //const valueReturn = matrix;
   console.log("print");
-  return <div>{matrix.map((elemt) => elemt)}</div>;
+  return (
+    <div>
+      {matrix.map((elemt) => {
+        return (
+          <div>
+            {" "}
+            {elemt}
+            <br />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+//entra una cadena y un cliterio sale array.
+export const inStringCliterioOutArray = (stringIn, criterio) => {
+  console.log(stringIn, criterio);
+  let trosos = stringIn.split(criterio);
+  let matrix = [];
+  trosos.forEach((element) => {
+    const valueAux = inStringOutArray(element);
+    if (valueAux.length > 1) {
+      matrix.push(valueAux);
+    }
+  });
+  console.log(matrix);
+  return matrix;
+};
+
+export const inArrayOutString = (array) => {
+  let stringValor = "[";
+  array.forEach((element) => {
+    stringValor = stringValor + " " + element;
+  });
+  stringValor = stringValor + " ]";
+  console.log(stringValor);
+  return stringValor;
+};
+
+// se separa por las comas.
+export const inStringOutArray = (stringIn) => {
+  let valor = stringIn.split(",");
+
+  return valor;
 };

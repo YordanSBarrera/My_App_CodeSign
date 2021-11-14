@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Formulario1I from "../../Formulario1I";
-import { inStringOutArray } from "../../codeSignal/FuncionesAux";
+import { inStringOutNumberArray } from "../../codeSignal/FuncionesAux";
 import { Make_Array_Consecutive_2Func } from "../../codeSignal/EdgeOfTheOcean";
 
 const MakeArrayConsecutive2 = () => {
@@ -26,7 +26,7 @@ const MakeArrayConsecutive2 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setRespuesta(Make_Array_Consecutive_2Func(inStringOutArray(array)));
+    setRespuesta(Make_Array_Consecutive_2Func(inStringOutNumberArray(array)));
   };
   return (
     <div>

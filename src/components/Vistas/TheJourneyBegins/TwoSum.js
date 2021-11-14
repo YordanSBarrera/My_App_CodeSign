@@ -3,8 +3,8 @@ import { AddFunc } from "../../codeSignal/TheJourneyBegins";
 import Formulario2Input from "../../Formulario2Input";
 
 const TwoSum = () => {
-  const [num1, setNum1] = useState(0);
-  const [num2, setNum2] = useState(0);
+  const [num1, setNum1] = useState();
+  const [num2, setNum2] = useState();
   const [respuesta, setRespuesta] = useState();
 
   const handleSubmit = (e) => {
@@ -13,7 +13,7 @@ const TwoSum = () => {
   };
   return (
     <Formulario2Input
-      nameFormulario={"Add TWO NUMBER"}
+      nameFormulario={"Add two Number"}
       setValue1={setNum1}
       setValue2={setNum2}
       nameButton={"Add"}
