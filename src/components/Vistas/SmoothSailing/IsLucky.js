@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IsLuckyFunc } from "../../codeSignal/SmoothSailing";
 import Formulario1I from "../../Formulario1I";
 
 const IsLucky = () => {
@@ -22,8 +23,8 @@ const IsLucky = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    //...
+    console.log(IsLuckyFunc(value1));
+    setRespuesta(IsLuckyFunc(value1) ? "True" : "False");
   };
 
   return (

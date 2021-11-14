@@ -43,7 +43,20 @@ export const CommonCharacterCountFunc = (string1, string2) => {
 };
 
 //11
-export const IsLuckyFunc = () => {};
+export const IsLuckyFunc = (number) => {
+  let value1 = 0;
+  let value2 = 0;
+  for (let i = 0; i < number.length / 2; i++) {
+    console.log(value1, value2);
+    value1 += parseInt(number[i]);
+    value2 += parseInt(number[number.length - 1 - i]);
+  }
+  console.log(value1, value2);
+  if (value1 === value2) {
+    return true;
+  }
+  return false;
+};
 
 //12
 export const SortByHeightFunc = () => {};
