@@ -59,7 +59,41 @@ export const IsLuckyFunc = (number) => {
 };
 
 //12
-export const SortByHeightFunc = () => {};
+export const SortByHeightFunc = (array) => {
+  let arrayCopia = [];
+  let respuesta = [];
+  array.forEach((element) => {
+    console.log(element);
+    if (element !== -1) {
+      arrayCopia.push(element);
+    }
+  });
+  arrayCopia.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(arrayCopia);
+
+  for (let index = 0, ac = 0; index < array.length; index++) {
+    if (array[index] === -1) {
+      respuesta.push(-1);
+    } else {
+      respuesta.push(arrayCopia[ac]);
+      ac++;
+    }
+  }
+  return respuesta;
+};
 
 //13
-export const ReverseInParenthesesFunc = () => {};
+export const ReverseInParenthesesFunc = (cadena) => {
+  ///arreglar
+  let respuesta = cadena.split(")");
+  console.log(respuesta);
+  let array = [];
+  // console.log(cadena.split(")", 2));
+  respuesta.forEach((element) => {
+    array.push(element.split("("));
+  });
+  console.log(array);
+  return respuesta;
+};

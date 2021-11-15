@@ -1,7 +1,7 @@
 import { useState } from "react";
 const Nuevo = () => {
-  const [v, setV] = useState("0");
-  const [respuesta, setRespuesta] = useState("");
+  const [value1, setValue1] = useState();
+  const [respuesta, setRespuesta] = useState();
   const info = (
     <div>
       <p className="text-muted font-italic">Description</p>
@@ -17,15 +17,16 @@ const Nuevo = () => {
     e.preventDefault();
 
     //...
+    setRespuesta(value1);
   };
 
   return (
     <div>
       <Formulario1I
-        valorInial={n}
+        valorInial={value1}
         nameFormulario={"Nuevo"}
         info={info}
-        setValue={setN}
+        setValue={setValue1}
         handleSubmit={handleSubmit}
         respuesta={respuesta}
         nameButton={"Button"}
