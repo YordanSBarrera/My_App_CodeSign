@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AlmostincreasingSequenceFunc } from "../../codeSignal/EdgeOfTheOcean";
-import { inStringOutArray } from "../../codeSignal/FuncionesAux";
+import { inStringOutNumberArray } from "../../codeSignal/FuncionesAux";
 import Formulario1I from "../../Formulario1I";
 
 const AlmostIncreasingSequense = () => {
@@ -31,7 +31,9 @@ const AlmostIncreasingSequense = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setRespuesta(
-      AlmostincreasingSequenceFunc(inStringOutArray(array)) ? "True" : "False"
+      AlmostincreasingSequenceFunc(inStringOutNumberArray(array))
+        ? "True"
+        : "False"
     );
   };
   return (
