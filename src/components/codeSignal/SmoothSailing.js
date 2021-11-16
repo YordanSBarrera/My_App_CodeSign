@@ -85,15 +85,33 @@ export const SortByHeightFunc = (array) => {
 };
 
 //13
+
 export const ReverseInParenthesesFunc = (cadena) => {
-  ///arreglar
-  let respuesta = cadena.split(")");
-  console.log(respuesta);
-  let array = [];
-  // console.log(cadena.split(")", 2));
-  respuesta.forEach((element) => {
-    array.push(element.split("("));
-  });
-  console.log(array);
-  return respuesta;
+  let auxStr = [];
+  let len = cadena.length;
+  for (let i = 0; i < len; i++) {
+    if (cadena[i] === "(") {
+      auxStr.push(i);
+    } else if (cadena[i] === ")") {
+      let A = [...cadena];
+      Reverse(A, auxStr[auxStr.length - 1] + 1, i);
+      cadena = [...A];
+      auxStr.pop();
+    }
+  }
+  let res = "";
+  for (let i = 0; i < len; i++) {
+    if (cadena[i] !== ")" && cadena[i] !== "(") {
+      res += cadena[i];
+    }
+  }
+  return res;
+};
+const Reverse = (A, l, h) => {
+  if (l < h) {
+    let ch = A[l];
+    A[l] = A[h];
+    A[h] = ch;
+    Reverse(A, l + 1, h - 1);
+  }
 };

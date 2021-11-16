@@ -124,3 +124,10 @@ export const inStringOutArray = (stringIn) => {
 
   return valor;
 };
+
+export const inStrinOutStringReverse = (cadena) => {
+  let valueAux = cadena.split("");
+  let arrayAux = valueAux.reverse();
+  let joinAux = arrayAux.join("");
+  return joinAux;
+};
