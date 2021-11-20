@@ -17,10 +17,16 @@ import IsLucky from "./Vistas/SmoothSailing/IsLucky";
 import SortByHeight from "./Vistas/SmoothSailing/SortByHeight";
 import ReverseInParentheses from "./Vistas/SmoothSailing/ReverseInParentheses";
 
+import AlternatingSums from "./Vistas/ExploringTheWaters/AlternatingSums";
+import AddBorder from "./Vistas/ExploringTheWaters/AddBorder";
+import AreSimilar from "./Vistas/ExploringTheWaters/AreSimilar";
+import ArrayChange from "./Vistas/ExploringTheWaters/ArrayChange";
+import PalindromeRearranging from "./Vistas/ExploringTheWaters/PalindromeRearranging";
+
 const DashboardLayout = () => {
   return (
     <div>
-      <Route path="/">
+      <Route path="/borrar">
         <h1 className="text-danger">Test Site.</h1>
         Dolore cupidatat reprehenderit non deserunt do officia exercitation.
         Culpa minim ea aute qui voluptate quis et deserunt eu. Et id in elit
@@ -69,6 +75,24 @@ const DashboardLayout = () => {
       </Route>
       <Route path="/ReverseInParentheses">
         <ReverseInParentheses />
+      </Route>
+      {/**end */}
+
+      {/** Parte #4 ExploringTheWaters  incio**/}
+      <Route path="/AlternatingSums">
+        <AlternatingSums />
+      </Route>
+      <Route path="/AddBorder">
+        <AddBorder />
+      </Route>
+      <Route path="/AreSimilar">
+        <AreSimilar />
+      </Route>
+      <Route path="/ArrayChange">
+        <ArrayChange />
+      </Route>
+      <Route path="/PalindromeRearranging">
+        <PalindromeRearranging />
       </Route>
       {/**end */}
     </div>
