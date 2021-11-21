@@ -13,7 +13,7 @@ function App() {
           <div className="col-4 alert alert-danger containerMenu position-relative">
             <MenuLayout />
           </div>
-          <div className="col-8 alert alert-primary">
+          <div className="col-8 alert alert-primary containerDashboar">
             <DashboardLayout />
           </div>
         </div>

@@ -23,6 +23,11 @@ import AreSimilar from "./Vistas/ExploringTheWaters/AreSimilar";
 import ArrayChange from "./Vistas/ExploringTheWaters/ArrayChange";
 import PalindromeRearranging from "./Vistas/ExploringTheWaters/PalindromeRearranging";
 
+import P1E1 from "./Vistas/Extras/P1E1";
+import P1E2 from "./Vistas/Extras/P1E2";
+import P1E3 from "./Vistas/Extras/P1E3";
+import P1E4 from "./Vistas/Extras/P1E4";
+
 const DashboardLayout = () => {
   return (
     <div>
@@ -35,20 +40,23 @@ const DashboardLayout = () => {
       <Route path="/borrar">
         <Borrar />
       </Route>
-      <Route path="/Palimdrome">
-        <Palindrome />
-      </Route>
-      <Route path="/AdjacentElementsProduct">
-        <AdjacentElementsProduct />
-      </Route>
+      {/** Parte #1 The Journey Begins  incio**/}
       <Route path="/TwoSum">
         <TwoSum />
+      </Route>
+      <Route path="/Palimdrome">
+        <Palindrome />
       </Route>
       <Route path="/CenturyFromYear">
         <CenturyFromYear />
       </Route>
+      {/**end */}
+      {/** Parte #2 Edge of the Ocean  incio**/}
       <Route path="/ShareArea">
         <ShareArea />
+      </Route>
+      <Route path="/AdjacentElementsProduct">
+        <AdjacentElementsProduct />
       </Route>
       <Route path="/MakeArrayConsecutive2">
         <MakeArrayConsecutive2 />
@@ -59,7 +67,7 @@ const DashboardLayout = () => {
       <Route path="/MatrixElementsSum">
         <MatrixElementsSum />
       </Route>
-
+      {/**end */}
       {/** Parte #3 Smoot Sailing  incio**/}
       <Route path="/AllLongestStrings">
         <AllLongestStrings />
@@ -77,7 +85,6 @@ const DashboardLayout = () => {
         <ReverseInParentheses />
       </Route>
       {/**end */}
-
       {/** Parte #4 ExploringTheWaters  incio**/}
       <Route path="/AlternatingSums">
         <AlternatingSums />
@@ -94,6 +101,21 @@ const DashboardLayout = () => {
       <Route path="/PalindromeRearranging">
         <PalindromeRearranging />
       </Route>
+      {/**end */}
+      {/** Parte EXTRA  incio**/}
+      <Route path="/P1E1">
+        <P1E1 />
+      </Route>
+      <Route path="/P1E2">
+        <P1E2 />
+      </Route>
+      <Route path="/P1E3">
+        <P1E3 />
+      </Route>
+      <Route path="/P1E4">
+        <P1E4 />
+      </Route>
+
       {/**end */}
     </div>
   );

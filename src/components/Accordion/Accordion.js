@@ -16,7 +16,7 @@ const Accordion = (props) => {
   const toggleState = () => {
     setToggle(!toggle);
   };
-
+  //{/**ref={refHeight} */}
   // console.log(toggle);
   return (
     <div className="accordion">
