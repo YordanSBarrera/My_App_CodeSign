@@ -9,21 +9,21 @@ const Accordion = (props) => {
   const refHeight = useRef();
 
   useEffect(() => {
-    console.log(refHeight);
+    //console.log(refHeight.current.scrollHeight);
     setHeightEl(`${refHeight.current.scrollHeight}px`);
   }, []);
 
   const toggleState = () => {
     setToggle(!toggle);
+    console.log("pincho botton...", props.contents.target);
+    // console.log("?..>", refHeight.current.scrollHeight);
   };
-  //{/**ref={refHeight} */}
-  // console.log(toggle);
+
   return (
     <div className="accordion">
       <button onClick={toggleState} className="accordion-visible">
-        {/**<span>Encabezado</span> */}
         <h3>{props.title}</h3>
-        <img className={toggle && "active"} src={Chevron} alt="icon" />
+        <img className={toggle ? "true" : "active"} src={Chevron} alt="icon" />
       </button>
 
       <div
@@ -37,3 +37,9 @@ const Accordion = (props) => {
   );
 };
 export default Accordion;
+/*
+ style={{ height: toggle ? `${heightEl}` : "0px" }}
+        ref={refHeight}
+
+        <img className={toggle && "active"} src={Chevron} alt="icon" />
+        */

@@ -121,22 +121,22 @@ export const Extra = () => {
   return (
     <ul>
       <li>
-        <Link href="/P1E1" className="item">
+        <Link href="/Extra/P1E1" className="item">
           Prueba #1 exe.1
         </Link>
       </li>
       <li>
-        <Link href="/P1E2" className="item">
+        <Link href="/Extra/P1E2" className="item">
           Prueba #1 exe.2
         </Link>
       </li>
       <li>
-        <Link href="/P1E3" className="item">
+        <Link href="/Extra/P1E3" className="item">
           Prueba #1 exe.3
         </Link>
       </li>
       <li>
-        <Link href="/P1E4" className="item">
+        <Link href="/Extra/P1E4" className="item">
           Prueba #1 exe.4
         </Link>
       </li>

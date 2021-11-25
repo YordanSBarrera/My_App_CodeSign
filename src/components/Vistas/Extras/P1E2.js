@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Formulario1I from "../../Formulario1I";
-import { ExeciteNumber1 } from "../../codeSignal/ExtraTest1";
+//import { ExeciteNumber1 } from "../../codeSignal/ExtraTest1";
 const P1E2 = () => {
   const [value1, setValue1] = useState();
   const [respuesta, setRespuesta] = useState();
