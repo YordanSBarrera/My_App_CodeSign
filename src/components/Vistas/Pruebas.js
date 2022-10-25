@@ -1,57 +1,49 @@
 import { useState } from "react";
-import {
-  deletePostInArray,
-  inStringOutNumberArray,
-} from "../codeSignal/FuncionesAux";
-import Formulario2Input from "../Formulario2Input";
-const Pruebas = () => {
+import Formulario1I from "../Formulario1I";
+
+import TestCodegSignal from "./pruebas/TestCodeSignal";
+import SayHello from "./pruebas/SayHello";
+
+function Pruebas() {
   const [value1, setValue1] = useState();
-  const [value2, setValue2] = useState();
-  const [respuesta, setRespuesta] = useState();
-  const info = (
-    <div>
-      <p className="text-muted font-italic">To test</p>
-      <br />
-      <h3>Example</h3>
-      [1,2,3,4,5,6,7,8,9,0]
-      <br />
-      primer imput un array segundo post para eliminar un elemento....
-    </div>
-  );
+  const [resp, setResp] = useState();
+  const prueb = new TestCodegSignal();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(inStringOutNumberArray(value1));
-    let arrayNeuvo = deletePostInArray(
-      parseInt(value2) - 1,
-      inStringOutNumberArray(value1)
-    );
+    prueb.add(parseInt(value1));
+    prueb.add(parseInt(value1) + 2);
+    prueb.add(parseInt(value1) + 5);
+    prueb.add(parseInt(value1) * 10);
+    prueb.add(parseInt(value1) * 14);
 
-    //inStringOutNumberArray(value1).splice(parseInt(value2), 1);
-    //.pop(parseInt(value2));
-    //...
-    setRespuesta(arrayNeuvo);
-    // setValue1(arrayNeuvo);
-    console.log(parseInt(value2));
-    console.log(arrayNeuvo);
+    console.log(prueb.getMedian());
+    setResp(prueb.getData());
   };
 
   return (
     <div>
-      <Formulario2Input
-        nameFormulario={"my test"}
-        setValue1={setValue1}
-        setValue2={setValue2}
-        nameButton={"test"}
-        respuesta={respuesta}
-        value1={value1}
-        value2={value2}
+      <SayHello />
+      <Formulario1I
+        valorInial={value1}
+        nameFormulario={"Nuevo"}
+        setValue={setValue1}
         handleSubmit={handleSubmit}
-        info={info}
+        respuesta={resp}
+        nameButton={"add"}
       />
     </div>
   );
+}
+const Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  area() {
+    return this.height * this.width;
+  }
 };
 
 export default Pruebas;

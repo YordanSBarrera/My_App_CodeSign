@@ -8,18 +8,27 @@ const Formulario1I = (props) => {
       </div>
       <div className="row">
         <div className="col-7">
+          <br />
+          <br />
           <form onSubmit={props.handleSubmit}>
-            <input
-              type="text"
-              placeholder={props.ValorInicial}
-              value={props.value}
-              onChange={(e) => props.setValue(e.target.value)}
-            />
-            <input
-              className="mx-2 my-3"
-              type="submit"
-              value={props.nameButton ? props.nameButton : "Aceptar"}
-            />
+            <div className="row">
+              <div className="col-6">
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder={props.ValorInicial}
+                  value={props.value}
+                  onChange={(e) => props.setValue(e.target.value)}
+                />
+              </div>
+              <div className="col-6">
+                <input
+                  className="btn btn-primary"
+                  type="submit"
+                  value={props.nameButton ? props.nameButton : "Aceptar"}
+                />
+              </div>
+            </div>
           </form>
           <br />
           <br />

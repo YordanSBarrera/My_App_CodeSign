@@ -14,6 +14,7 @@ const MenuLayout = () => {
   return (
     <div className="menuLayout">
       <h3>Menu</h3>
+      <Accordion title=" Extra" contents={Extra()} />
       <Accordion title=" The Journery Begins" contents={TheJourneryBegins()} />
       <Accordion
         title=" The Edgen of the Ocean"
@@ -24,7 +25,6 @@ const MenuLayout = () => {
         title=" Exploring The Waters"
         contents={ExploringTheWaters()}
       />
-      <Accordion title=" Extra" contents={Extra()} />
     </div>
   );
 };

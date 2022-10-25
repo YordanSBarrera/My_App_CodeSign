@@ -1,4 +1,4 @@
-import Route from "./Route";
+//import Route from "./Route";
 import Borrar from "./Vistas/Borrar";
 import Pruebas from "./Vistas/Pruebas";
 
@@ -28,104 +28,104 @@ import P1E1 from "./Vistas/Extras/P1E1";
 import P1E2 from "./Vistas/Extras/P1E2";
 import P1E3 from "./Vistas/Extras/P1E3";
 import P1E4 from "./Vistas/Extras/P1E4";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 const DashboardLayout = () => {
   return (
     <div>
       <BrowserRouter>
-      <Route path="/">
-        <div>
-          <h1 className="text-danger">Test Site.</h1>
-          Dolore cupidatat reprehenderit non deserunt do officia exercitation.
-          Culpa minim ea aute qui voluptate quis et deserunt eu. Et id in elit
-          ipsum esse.
-          <Pruebas />
-          <i className="bi bi-arrow-down-square"></i>
-        </div>
-      </Route>
-      <Route path="/borrar" exact>
-        <Borrar />
-      </Route>
-      <Route path="/FirstDuplicate" exact>
-        <Borrar />
-      </Route>
-      {/** Parte #1 The Journey Begins  incio**/}
-      <Route path="/TwoSum" exact>
-        <TwoSum />
-      </Route>
-      <Route path="/Palimdrome" exact>
-        <Palindrome />
-      </Route>
-      <Route path="/CenturyFromYear" exact>
-        <CenturyFromYear />
-      </Route>
-      {/**end */}
-      {/** Parte #2 Edge of the Ocean  incio**/}
-      <Route path="/ShareArea" exact>
-        <ShareArea />
-      </Route>
-      <Route path="/AdjacentElementsProduct" exact>
-        <AdjacentElementsProduct />
-      </Route>
-      <Route path="/MakeArrayConsecutive2" exact>
-        <MakeArrayConsecutive2 />
-      </Route>
-      <Route path="/AlmostIncreasingSequense" exact>
-        <AlmostIncreasingSequense />
-      </Route>
-      <Route path="/MatrixElementsSum" exact>
-        <MatrixElementsSum />
-      </Route>
-      {/**end */}
-      {/** Parte #3 Smoot Sailing  incio**/}
-      <Route path="/AllLongestStrings" exact>
-        <AllLongestStrings />
-      </Route>
-      <Route path="/CommonCharacterCount" exact>
-        <CommonCharacterCount />
-      </Route>
-      <Route path="/IsLucky" exact>
-        <IsLucky />
-      </Route>
-      <Route path="/SortByHeight" exact>
-        <SortByHeight />
-      </Route>
-      <Route path="/ReverseInParentheses" exact>
-        <ReverseInParentheses />
-      </Route>
-      {/**end */}
-      {/** Parte #4 ExploringTheWaters  incio**/}
-      <Route path="/AlternatingSums" exact>
-        <AlternatingSums />
-      </Route>
-      <Route path="/AddBorder" exact>
-        <AddBorder />
-      </Route>
-      <Route path="/AreSimilar" exact>
-        <AreSimilar />
-      </Route>
-      <Route path="/ArrayChange" exact>
-        <ArrayChange />
-      </Route>
-      <Route path="/PalindromeRearranging" exact>
-        <PalindromeRearranging />
-      </Route>
-      {/**end */}
-      {/** Parte EXTRA  incio**/}
-      <Route path="/Extra/P1E1" exact>
-        <P1E1 />
-      </Route>
-      <Route path="/Extra/P1E2" exact>
-        <P1E2 />
-      </Route>
-      <Route path="/Extra/P1E3" exact>
-        <P1E3 />
-      </Route>
-      <Route path="/Extra/P1E4" exact>
-        <P1E4 />
-      </Route>
-     </BrowserRouter>
+        <Route path="/" exact>
+          <div>
+            <h1 className="text-danger">Test Site.</h1>
+            Dolore cupidatat reprehenderit non deserunt do officia exercitation.
+            Culpa minim ea aute qui voluptate quis et deserunt eu. Et id in elit
+            ipsum esse.
+            <Pruebas />
+            <i className="bi bi-arrow-down-square"></i>
+          </div>
+        </Route>
+        <Route path="/borrar" exact>
+          <Borrar />
+        </Route>
+        <Route path="/FirstDuplicate" exact>
+          <Borrar />
+        </Route>
+        {/** Parte #1 The Journey Begins  incio**/}
+        <Route path="/TwoSum" exact>
+          <TwoSum />
+        </Route>
+        <Route path="/Palimdrome" exact>
+          <Palindrome />
+        </Route>
+        <Route path="/CenturyFromYear" exact>
+          <CenturyFromYear />
+        </Route>
+        {/**end */}
+        {/** Parte #2 Edge of the Ocean  incio**/}
+        <Route path="/ShareArea" exact>
+          <ShareArea />
+        </Route>
+        <Route path="/AdjacentElementsProduct" exact>
+          <AdjacentElementsProduct />
+        </Route>
+        <Route path="/MakeArrayConsecutive2" exact>
+          <MakeArrayConsecutive2 />
+        </Route>
+        <Route path="/AlmostIncreasingSequense" exact>
+          <AlmostIncreasingSequense />
+        </Route>
+        <Route path="/MatrixElementsSum" exact>
+          <MatrixElementsSum />
+        </Route>
+        {/**end */}
+        {/** Parte #3 Smoot Sailing  incio**/}
+        <Route path="/AllLongestStrings" exact>
+          <AllLongestStrings />
+        </Route>
+        <Route path="/CommonCharacterCount" exact>
+          <CommonCharacterCount />
+        </Route>
+        <Route path="/IsLucky" exact>
+          <IsLucky />
+        </Route>
+        <Route path="/SortByHeight" exact>
+          <SortByHeight />
+        </Route>
+        <Route path="/ReverseInParentheses" exact>
+          <ReverseInParentheses />
+        </Route>
+        {/**end */}
+        {/** Parte #4 ExploringTheWaters  incio**/}
+        <Route path="/AlternatingSums" exact>
+          <AlternatingSums />
+        </Route>
+        <Route path="/AddBorder" exact>
+          <AddBorder />
+        </Route>
+        <Route path="/AreSimilar" exact>
+          <AreSimilar />
+        </Route>
+        <Route path="/ArrayChange" exact>
+          <ArrayChange />
+        </Route>
+        <Route path="/PalindromeRearranging" exact>
+          <PalindromeRearranging />
+        </Route>
+        {/**end */}
+        {/** Parte EXTRA  incio**/}
+        <Route path="/Extra/P1E1" exact>
+          <P1E1 />
+        </Route>
+        <Route path="/Extra/P1E2" exact>
+          <P1E2 />
+        </Route>
+        <Route path="/Extra/P1E3" exact>
+          <P1E3 />
+        </Route>
+        <Route path="/Extra/P1E4" exact>
+          <P1E4 />
+        </Route>
+      </BrowserRouter>
       {/**end */}
     </div>
   );
