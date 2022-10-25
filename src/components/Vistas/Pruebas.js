@@ -36,14 +36,14 @@ function Pruebas() {
     </div>
   );
 }
-const Rectangle = class {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
-  area() {
-    return this.height * this.width;
-  }
-};
+// const Rectangle = class {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+//   area() {
+//     return this.height * this.width;
+//   }
+// };
 
 export default Pruebas;
