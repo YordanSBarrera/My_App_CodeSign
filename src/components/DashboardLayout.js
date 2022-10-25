@@ -1,6 +1,5 @@
 //import Route from "./Route";
 import Borrar from "./Vistas/Borrar";
-import Pruebas from "./Vistas/Pruebas";
 
 import Palindrome from "./Vistas/TheJourneyBegins/Palindrome";
 import CenturyFromYear from "./Vistas/TheJourneyBegins/CenturyFromYear";
@@ -29,20 +28,14 @@ import P1E2 from "./Vistas/Extras/P1E2";
 import P1E3 from "./Vistas/Extras/P1E3";
 import P1E4 from "./Vistas/Extras/P1E4";
 import { BrowserRouter, Route } from "react-router-dom";
+import Inicio from "./inicio";
 
 const DashboardLayout = () => {
   return (
     <div>
       <BrowserRouter>
         <Route path="/" exact>
-          <div>
-            <h1 className="text-danger">Test Site.</h1>
-            Dolore cupidatat reprehenderit non deserunt do officia exercitation.
-            Culpa minim ea aute qui voluptate quis et deserunt eu. Et id in elit
-            ipsum esse.
-            <Pruebas />
-            <i className="bi bi-arrow-down-square"></i>
-          </div>
+          <Inicio/>
         </Route>
         <Route path="/borrar" exact>
           <Borrar />
