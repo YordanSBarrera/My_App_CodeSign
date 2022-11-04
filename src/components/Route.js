@@ -5,6 +5,7 @@ const Route = ({ path, children }) => {
 
   useEffect(() => {
     const onLocationChange = () => {
+      console.log(window.location.pathname);
       setCurrentPath(window.location.pathname);
     };
 

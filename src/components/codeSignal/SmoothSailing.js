@@ -17,16 +17,16 @@ export const AllLongestStringsFunc = (array) => {
 };
 
 //10
-export const CommonCharacterCountFunc = (string1, string2) => {
+export const CommonCharacterCountFunc = (s1, s2) => {
   let contador = 0;
   let valor1 = "";
   let valor2 = "";
-  if (string1.length > string2.length) {
-    valor1 = string2;
-    valor2 = string1;
+  if (s1.length > s2.length) {
+    valor1 = s2;
+    valor2 = s1;
   } else {
-    valor1 = string1;
-    valor2 = string2;
+    valor1 = s1;
+    valor2 = s2;
   }
   for (let index = 0; index < valor1.length; index++) {
     if (valor2.includes(valor1[index])) {
@@ -44,8 +44,8 @@ export const CommonCharacterCountFunc = (string1, string2) => {
 
 //11
 export const IsLuckyFunc = (number) => {
-  let value1 = 0;
-  let value2 = 0;
+  let value1,value2 = 0;
+  //let value2 = 0;
   for (let i = 0; i < number.length / 2; i++) {
     console.log(value1, value2);
     value1 += parseInt(number[i]);

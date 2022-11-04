@@ -24,18 +24,13 @@ const MatrixElementsSum = () => {
   );
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // inStringOuMatrix(matrix);
-
     setRespuesta(MatrixElementsSumFunc(inStringOutMatrix(matrix)));
-    //);
   };
   return (
     <div>
-      MatrixElementsSum
       <Formulario1I
         valorInial={matrix}
-        nameFormulario={""}
+        nameFormulario={"MatrixElementsSum"}
         info={info}
         setValue={setMatrix}
         respuesta={respuesta}

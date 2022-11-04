@@ -1,101 +1,30 @@
-import Link from "./Link";
+//import Link from "./Link";
 import "../App";
+import Accordion from "./Accordion/Accordion";
+import {
+  TheJourneryBegins,
+  TheEdgenOfTheOcean,
+  ExploringTheWaters,
+  SmoothSailing,
+  Extra,
+} from "./MenuData";
+//import Borrar from "./Vistas/Borrar";
 
 const MenuLayout = () => {
   return (
     <div className="menuLayout">
-      Menu
-      <br />
-      <ul>
-        <li>
-          <Link href="/" className="item">
-            Home
-          </Link>
-        </li>
-        <li>
-          <h3> The Journery Begins</h3>
-          <ul>
-            <li>
-              <Link href="/TwoSum" className="item">
-                Add
-              </Link>
-            </li>
-            <li>
-              <Link href="/CenturyFromYear" className="item">
-                CenturyFromYear
-              </Link>
-            </li>
-            <li>
-              <Link href="/Palimdrome" className="item">
-                checkPalindrome
-              </Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>The Edgen of the Ocean</h3>
-          <ul>
-            <li>
-              <Link href="/AdjacentElementsProduct" className="item">
-                AdjacentElementsProduct
-              </Link>
-            </li>
-            <li>
-              <Link href="/ShareArea" className="item">
-                ShareArea
-              </Link>
-            </li>
-            <li>
-              <Link href="/MakeArrayConsecutive2" className="item">
-                Make Array Consecutive 2
-              </Link>
-            </li>
-            <li>
-              <Link href="/AlmostIncreasingSequense" className="item">
-                AlmostIncreasingSequense
-              </Link>
-            </li>
-            <li>
-              <Link href="/MatrixElementsSum" className="item">
-                MatrixElementsSum
-              </Link>
-            </li>
-          </ul>
-          <h3>Smooth Sailing</h3>
-          <ul>
-            <li>
-              <Link href="/AllLongestStrings" className="item">
-                AllLongestStrings
-              </Link>
-            </li>
-            <li>
-              <Link href="/CommonCharacterCount" className="item">
-                common Character Count
-              </Link>
-            </li>
-            <li>
-              <Link href="/IsLucky" className="item">
-                isLucky
-              </Link>
-            </li>
-            <li>
-              <Link href="/SortByHeight" className="item">
-                Sort by Height
-              </Link>
-            </li>
-            <li>
-              <Link href="/ReverseInParentheses" className="item">
-                reverseInParentheses
-              </Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link href="/borrar" className="item">
-            Borrar
-          </Link>
-        </li>
-      </ul>
+      <h3>Menu</h3>
+      <Accordion title=" Extra" contents={Extra()} />
+      <Accordion title=" The Journery Begins" contents={TheJourneryBegins()} />
+      <Accordion
+        title=" The Edgen of the Ocean"
+        contents={TheEdgenOfTheOcean()}
+      />
+      <Accordion title="Smooth Sailing" contents={SmoothSailing()} />
+      <Accordion
+        title=" Exploring The Waters"
+        contents={ExploringTheWaters()}
+      />
     </div>
   );
 };

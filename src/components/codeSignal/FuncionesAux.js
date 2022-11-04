@@ -83,7 +83,6 @@ export const printMatrix = (matrix) => {
       {matrix.map((elemt) => {
         return (
           <div>
-            {" "}
             {elemt}
             <br />
           </div>
@@ -130,4 +129,24 @@ export const inStrinOutStringReverse = (cadena) => {
   let arrayAux = valueAux.reverse();
   let joinAux = arrayAux.join("");
   return joinAux;
+};
+
+export const deleteElementInArray = (elem, arr) => {
+  let arrayCopia = [];
+  arr.forEach((element) => {
+    if (element !== elem) {
+      arrayCopia.push(element);
+    }
+  });
+  return arrayCopia;
+};
+export const deletePostInArray = (position, arr) => {
+  let arrayCopia = [];
+  for (let index = 0; index < arr.length; index++) {
+    if (index !== position) {
+      arrayCopia.push(arr[index]);
+    }
+  }
+
+  return arrayCopia;
 };
